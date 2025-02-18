@@ -1,0 +1,107 @@
+<MusicApp>:
+    orientation: "vertical"
+    spacing: dp(10)
+    padding: dp(10)
+
+    # Favorite Artists Section
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.2  # Adjust height
+        spacing: dp(10)
+
+        Label:
+            text: "Your favorite artists"
+            font_size: "20sp"
+            color: 1, 1, 1, 1  # White
+            size_hint_x: 0.5  # Take half width of the row
+
+        Image:
+            source: "artist1.jpg"
+            size_hint_x: 0.1
+            allow_stretch: True
+        Image:
+            source: "artist2.jpg"
+            size_hint_x: 0.1
+            allow_stretch: True
+        Image:
+            source: "artist3.jpg"
+            size_hint_x: 0.1
+            allow_stretch: True
+
+    # Made For You Section
+    Label:
+        text: "Made for you"
+        font_size: "18sp"
+        size_hint_y: 0.1
+        color: 1, 1, 1, 1
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.2
+        spacing: dp(10)
+
+        Button:
+            text: "Playlist 1"
+            size_hint_x: 0.3
+            background_color: 0.2, 0.6, 1, 1  # Blue button
+        Button:
+            text: "Playlist 2"
+            size_hint_x: 0.3
+            background_color: 0.8, 0.2, 0.6, 1  # Pink button
+        Button:
+            text: "Playlist 3"
+            size_hint_x: 0.3
+            background_color: 0.6, 0.8, 0.2, 1  # Green button
+
+    # Valentine Section
+    Label:
+        text: "Saint-Valentin 2025"
+        font_size: "18sp"
+        size_hint_y: 0.1
+        color: 1, 1, 1, 1
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.2
+        spacing: dp(10)
+
+        Button:
+            text: "Your Love Mix"
+            size_hint_x: 0.3
+            background_color: 1, 0.2, 0.2, 1  # Red button
+        Button:
+            text: "Hits Saint-Valentin"
+            size_hint_x: 0.3
+            background_color: 0.9, 0.4, 0.1, 1  # Orange button
+        Button:
+            text: "J'aime 2025"
+            size_hint_x: 0.3
+            background_color: 0.3, 0.6, 0.8, 1  # Light blue button
+
+    # Bottom Music Player Section
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.1
+        padding: dp(5)
+        spacing: dp(5)
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.1, 1  # Dark background
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: "Green"
+            color: 1, 1, 1, 1
+            size_hint_x: 0.6
+
+        Button:
+            text: "❤️"
+            size_hint_x: 0.2
+            background_color: 0.8, 0.1, 0.1, 1
+
+        Button:
+            text: "▶"
+            size_hint_x: 0.2
+            background_color: 0.1, 0.8, 0.1, 1
